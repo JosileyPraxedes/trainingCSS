@@ -131,6 +131,11 @@ body{
     transform: translate3d(-90px, -90px, 90px) rotate(-15deg);
 }
 
+.container .contentBx:hover .product{
+    transform: translate3d(-90px, -90px, 100px) rotate(-15deg);
+}
+
+
 .container .contentBx:nth-child(1) .circle,
 .container .contentBx:nth-child(1) .buy{
     background: #379bf7
