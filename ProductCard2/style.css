@@ -5,3 +5,133 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    transform-style: preserve-3d;
+}
+
+.container .contentBx{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    background: #232323;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+
+.container .contentBx::before{
+    content: 'Phillips';
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    font-size: 4.2em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.container .contentBx::after{
+    content: 'Headphone';
+    position: absolute;
+    bottom: 65px;
+    right: 20px;
+    font-size: 2.8em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.container .contentBx:hover::before,
+.container .contentBx:hover::after{
+    opacity: 0.04;
+}
+
+.container .contentBx .name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.container .contentBx:hover .name{
+    top: 20px;
+    opacity: 1;
+}
+
+.container .contentBx .buy {
+    position: absolute;
+    padding: 10px 30px;
+    bottom: 0;
+    left: 50px;
+    transform-style: preserve-3d;
+    transform: translate3d(10px,0,75px);
+    color: #fff;
+    background: #333333;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.container .contentBx:hover .buy{
+    bottom: 20px;
+    opacity: 1;
+}
+
+.container .contentBx .circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.5s;
+    background: #fff;
+    transform-style: preserve-3d;
+    z-index: 10;
+    opacity: 1;
+    transform: translate3d(-90px, -90px, 90px);
+}
+
+.container .contentBx .product{
+    position: absolute;
+    top: 40%;
+    left: -30%;
+    max-width: 700px;
+    z-index: 11;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-90px, -90px, 90px) rotate(-15deg);
+}
+
+.container .contentBx:nth-child(1) .circle,
+.container .contentBx:nth-child(1) .buy{
+    background: #379bf7
+}
